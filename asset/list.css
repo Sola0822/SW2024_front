@@ -1,13 +1,8 @@
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 ul, li {
     list-style: none;
 }
 
-#tab-4 > .page {
+.page {
     display: flex;
     flex-direction: column;
 }

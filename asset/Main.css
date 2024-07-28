@@ -17,12 +17,21 @@
     box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
     margin: 0;
     font: 1.2rem "DNFBitBitv2";
     justify-content: center;
     width: 100%;
     background-color:honeydew;
+}
+
+header{
+  padding: 0rem 4rem;
 }
 
 main{
@@ -36,30 +45,29 @@ footer{
 
 .logo{
     text-align: center;
+    padding-bottom: 10px;
 }
 
 #signin{
-    position: fixed;
-    float:right;
-    top:0.3rem;
-    right:0.3rem;
-    font: size 0.5rem;
+  text-align: right;
+  padding: 5px 0px;
+  font: size 0.5rem;
 }
 
 /*이미지 슬라이드*/
-.main{
-    margin: -2px auto;
-    max-width: 60rem;
-    width: 100%;
-    display: block;
-    
-    padding: 1rem;
-    min-height: 15em;
-    max-height: 50em;
+.content{
+  margin: 0px auto;
+  max-width: 60rem;
+  width: 100%;
+  display: block;
+  
+  padding: 1rem;
+  min-height: 15em;
+  max-height: 50em;
 
-    border: 3px solid;
-    border-radius: 5px;
-    background-color: #fff;
+  border: 3px solid;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 .slider {

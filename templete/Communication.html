@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셔틀버스</title>
+    <link rel="stylesheet" href="../asset/main.css">
+    <link rel="stylesheet" href="../asset/Communication.css">
+    <link rel="stylesheet" href="../asset/list.css">
+    <script  src="../asset/tab.js"></script> <!--자바스크립트 적용-->
+</head>
+<body>
+    <header>
+        <div id="signin">
+            <a href="signin.html">회원가입/로그인</a>
+        </div>
+        <div class="logo">
+            <a href="Main.html"><img src="../asset/수룡선배 아이콘2.png" width="400px" alt="Logo"></a>
+        </div>
+        <nav class="folder">
+            <div class="tabs">
+                <a href="Sujung.html" class="tab"><div><span>수정캠퍼스</span></div></a>
+                <a href="Unjung.html" class="tab"><div><span>운정캠퍼스</span></div></a>
+                <a href="Bus.html" class="tab"><div><span>셔틀버스</span></div></a>
+                <a href="Communication.html" class="tab"><div><span>수정이 공간</span></div></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content__inner"> <!--수정이 공간-->
+            <div class="page">
+
+                <div class="top"> <!--검색창-->
+                    <form class="search-box" method="get">
+                        <input class="search-txt" type="text" placeholder="검색어를 입력하세요.">
+                        <button class="search-btn" type="submit">
+                            <img src="../asset/검색.png" alt="검색 버튼" width="30px">
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="tab_content"> <!--수정이 공간 tab-->
+                    <input type="radio" name="tabmenu" id="FAQ" checked>
+                    <label for="FAQ">FAQ</label>
+                    <input type="radio" name="tabmenu" id="Q&A">
+                    <label for="Q&A">Q&A</label>
+                        
+                    <div class="conbox con1"> <!--FAQ 게시판-->
+                        <div class="accordion">
+                            <input type="radio" name="accordion" id="answer01">
+                            <label for="answer01">성적장학금과 성신장학금의 차이점이 궁금해요<em></em></label>
+                            <div><p>여기에 추가되는 부분이 자주묻는 질문의 답변, 내용 추천 받아요*^^*</p></div>
+                            <input type="radio" name="accordion" id="answer02">
+                            <label for="answer02">컨텐츠 제목 부분<em></em></label>
+                            <div><p>여기에 추가되는 부분이 자주묻는 질문의 답변, 내용 추천 받아요*^^*</p></div>
+                            <input type="radio" name="accordion" id="answer03">
+                            <label for="answer03">컨텐츠 제목 부분<em></em></label>
+                            <div><p>여기에 추가되는 부분이 자주묻는 질문의 답변, 내용 추천 받아요*^^*</p></div>
+                            <input type="radio" name="accordion" id="answer04">
+                            <label for="answer04">컨텐츠 제목 부분<em></em></label>
+                            <div><p>여기에 추가되는 부분이 자주묻는 질문의 답변, 내용 추천 받아요*^^*</p></div>
+                            <input type="radio" name="accordion" id="answer05">
+                            <label for="answer05">컨텐츠 제목 부분<em></em></label>
+                            <div><p>여기에 추가되는 부분이 자주묻는 질문의 답변, 내용 추천 받아요*^^*</p></div>
+                        </div>
+                    </div>
+
+                    <div class="conbox con2"> <!--Q&A 게시판-->
+                            <div class="idx_board">
+                                <div class="title">
+                                        <h2 class="name">Q&A 게시판</h2>
+                                        <p>학교 생활하면서 궁금한 사항들을 묻고 답하는 게시판입니다.</p>
+                                    </div>
+                                    <div class="list">
+                                        <div class="top">
+                                            <div class="num">번호</div>
+                                            <div class="title">제목</div>
+                                            <div class="writer">글쓴이</div>
+                                            <div class="date">작성일</div>
+                                        </div>
+                                        <div>
+                                            <div class="num">4</div>
+                                            <div class="title"><a href="view.html">글 제목이 들어갑니다.</a></div>
+                                            <div class="writer">김이름</div>
+                                            <div class="date">2021.1.15</div>
+                                        </div>
+                                        <div>
+                                            <div class="num">3</div>
+                                            <div class="title"><a href="view.html">글 제목이 들어갑니다.</a></div>
+                                            <div class="writer">김이름</div>
+                                            <div class="date">2021.1.15</div>
+                                        </div>
+                                        <div>
+                                            <div class="num">2</div>
+                                            <div class="title"><a href="view.html">글 제목이 들어갑니다.</a></div>
+                                            <div class="writer">김이름</div>
+                                            <div class="date">2021.1.15</div>
+                                        </div>
+                                        <div>
+                                            <div class="num">1</div>
+                                            <div class="title"><a href="view.html">글 제목이 들어갑니다.</a></div>
+                                            <div class="writer">김이름</div>
+                                            <div class="date">2021.1.15</div>
+                                        </div>
+                                    </div>
+                                    <div class="board_page">
+                                        <a href="#" class="bt first"><<</a>
+                                        <a href="#" class="bt prev"><</a>
+                                        <a href="#" class="num on">1</a>
+                                        <a href="#" class="num">2</a>
+                                        <a href="#" class="num">3</a>
+                                        <a href="#" class="num">4</a>
+                                        <a href="#" class="num">5</a>
+                                        <a href="#" class="bt next">></a>
+                                        <a href="#" class="bt last">>></a>
+                                    </div>
+                                    <div class="bt_wrap">
+                                        <a href="write.html" class="on">등록</a>
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>©컴공 전복자들</p>
+    </footer>
+</body>
+</html>
