@@ -16,6 +16,7 @@ ul, li {
 
 .top{
     height: 10%;
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -30,27 +31,27 @@ ul, li {
 
 /*검색 관련*/
 .search-box{
+    width: 70%;
     height: 40px;
-    width: 400px;
     background-color: #fff;
     border-radius: 40px;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px auto;
     border: 2px solid #55BEB6;
 }
 
 .search-txt{
+    float: left;
     border: none;
     background-color: #fff;
     outline: none;
-    float: left;
     font-size: 15px;
-    width: 300px;
+    width: 80%;
 }
 
 .search-btn{
     float: right;
-    width: 25px;
+    width: 30px;
     height: 20px;
     border: none;
     display: flex;
@@ -197,6 +198,7 @@ input[id*="answer"]:checked + label em {
     display: inline-block;
     padding: 5px 0;
     text-align: center;
+    vertical-align: middle;
     font-size: 1rem;
 }
 
