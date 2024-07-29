@@ -1,6 +1,5 @@
 /*폴더 + 메모지로 꾸미는 느낌의 디자인 활용할 예정*/
 /*다른 코드 불러오기*/
-@import url(list.css);
 @import url(tab.css);
 @import url(signin.css);
 
@@ -93,19 +92,19 @@ footer{
   }
   
   .slide:nth-child(1) {
-    background-image: url(../asset/성신여대\ 풍경/봄.jpg);
+    background-image: url(../asset/이미지/성신여대/봄.jpg);
     animation-delay: 0;
   }
   .slide:nth-child(2) {
-    background-image: url(../asset/성신여대\ 풍경/여름.jpg);
+    background-image: url(../asset/이미지/성신여대/여름.jpg);
     animation-delay: -3s;
   }
   .slide:nth-child(3) {
-    background-image: url(../asset/성신여대\ 풍경/가을.jpg);
+    background-image: url(../asset/이미지/성신여대/가을.jpg);
     animation-delay: -6s;
   }
   .slide:nth-child(4) {
-    background-image: url(../asset/성신여대\ 풍경/겨울.jpg);
+    background-image: url(../asset/이미지/성신여대/겨울.jpg);
     animation-delay: -9s;
   }
   
