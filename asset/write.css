@@ -45,7 +45,7 @@ a {
     font-size: 0;
 }
 
-.bt_wrap a {
+.bt_wrap input, button {
     display: inline-block;
     min-width: 80px;
     margin-left: 10px;
@@ -55,11 +55,11 @@ a {
     font-size: 1.4rem;
 }
 
-.bt_wrap a:first-child {
+.bt_wrap input {
     margin-left: 0;
 }
 
-.bt_wrap a.on {
+.bt_wrap input.on {
     background: #000;
     color: #fff;
 }

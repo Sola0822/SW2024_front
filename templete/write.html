@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +15,70 @@
         </div>
         <div class="board_write_wrap">
             <div class="board_write">
-                <div class="title">
-                    <dl>
-                        <dt>제목</dt>
-                        <dd><input type="text" placeholder="제목 입력"></dd>
-                    </dl>
-                </div>
-                <div class="cont">
-                    <textarea placeholder="내용 입력"></textarea>
-                </div>
+                <form id="postForm">
+
+                    <div class="title">
+                        <dl>
+                            <dt> <label for="title">제목:</label> </dt>
+                            <dd> <input type="text" id="title" name="title" placeholder="제목 입력"> </dd>
+                        </dl>
+                    </div>
+
+                    <div class="cont">
+                        <textarea id="content" name="content" placeholder="내용 입력"></textarea>
+                    </div>
+                </form>
             </div>
+            
             <div class="bt_wrap">
-                <a href="view.html" class="on">등록</a>
-                <a href="Communication.html">취소</a>
-                <!--홈버튼도 만들것-->
+                <input type="submit" value="등록" class="on"> <!--등록하고 나서, view(작성한 내용 확인)로 넘어가게끔 코드 수정 필요-->
+                <button type="button" onclick="cancelPost()">취소</button> <!--등록하고 나서, Communication(수정이 공간)로 넘어가게끔 코드 수정 필요-->
             </div>
         </div>
     </div>
+<!--
+    <script>
+        const authToken = sessionStorage.getItem('authToken');
+
+        if (!authToken) {
+            alert('로그인 후 접근 가능합니다');
+            window.location.href = 'login';
+        }
+
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            fetch('/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': authToken
+                },
+                body: JSON.stringify({ title, content })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.msg) {
+                    alert(data.msg);
+                } else {
+                    alert('게시글이 성공적으로 작성되었습니다!');
+                    window.location.href = '/view.html';
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+
+        function cancelPost() {
+            if (confirm('글 작성을 정말 취소하시겠습니까?')) {
+                window.location.href = '/view.html';
+            }
+        }
+    </script>
 </body>
+
 </html>

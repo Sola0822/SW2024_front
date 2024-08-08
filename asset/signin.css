@@ -4,10 +4,11 @@
     font-weight: normal;
     font-style: normal;
   }
-.logo{
+
+.logo, h1{
     text-align: center;
 }
-table {
+table, form{
     width: 280px;
     height: 250px;
     margin: auto;
@@ -23,7 +24,7 @@ input[type="text"], input[type="password"] {
     padding-left: 10px;
     background-color: rgb(233,233,233);
 }
-.btn {
+.btn, input[type="submit"] {
     width: 263px;
     height: 32px;
     font-size: 15px;
