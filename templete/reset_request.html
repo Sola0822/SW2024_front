@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>비밀번호 재설정 요청</title>
+    <link rel="stylesheet" href="../asset/signin.css">
 </head>
+
 <body>
-    <h1>비밀번호 재설정 요청</h1>
-    <h1>이메일 전송에 5초가량 소요됩니다. 전송 완료 글씨가 뜰 때 까지 기다려주세요!</h1>
+    <div class="logo">
+        <a href="index.html"><img src="../asset/이미지/수룡선배 아이콘2.png" width="350px"></a>
+    </div>
     <form id="resetRequestForm">
+        <h2>비밀번호 재설정 요청</h2>
+        
         <label for="studentID">학번:</label><br>
         <input type="text" id="studentID" name="studentID"><br><br>
         <input type="submit" value="재설정 링크 요청">
+        <h4>
+            이메일 전송에 5초가량 소요됩니다.<br>
+            전송 완료가 뜰 때까지 기다려주세요!
+        </h4>
     </form>
     <p id="message" style="color: red;"></p>
 

@@ -5,7 +5,12 @@
     font-style: normal;
   }
 
-.logo, h1{
+.logo{
+    text-align: center;
+   
+}
+h4{
+    color: rgb(124, 144, 204);
     text-align: center;
 }
 table, form{
