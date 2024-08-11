@@ -21,7 +21,7 @@
                 <a href="Sujung.html" class="tab"><div><span>수정캠퍼스</span></div></a>
                 <a href="Unjung.html" class="tab"><div><span>운정캠퍼스</span></div></a>
                 <a href="Bus.html" class="tab"><div><span>셔틀버스</span></div></a>
-                <a href="Communication.html" class="tab"><div><span>수정이 공간</span></div></a>
+                <a href="view.html" class="tab"><div><span>수정이 공간</span></div></a>
             </div>
         </nav>
     </header>
@@ -70,5 +70,63 @@
     <footer>
         <p>©컴공 전복자들</p>
     </footer>
+
+    <script>
+        function toggleContent(element) {
+            var content = element.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        // 로그인 상태 확인
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = sessionStorage.getItem('authToken');
+            if (token) {
+                fetch('/users/me', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                })
+                .then(response => response.json())
+                .then(user => {
+                    if (user.username) {
+                        document.getElementById('signin').innerHTML = `
+                            ${user.username}님, 반갑습니다! 
+                            <button id="logoutButton">로그아웃</button>
+                        `;
+                        document.getElementById('logoutButton').addEventListener('click', () => {
+                            sessionStorage.removeItem('authToken');
+                            window.location.href = '/index.html';
+                        });
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        });
+
+
+        // JavaScript를 이용하여 마우스 호버 시 이미지 변경
+document.querySelectorAll('.right p').forEach(item => {
+    item.addEventListener('mouseover', function() {
+        document.querySelectorAll('.left img').forEach(img => img.style.display = 'none');
+        const imgId = this.getAttribute('data-image');
+        const img = document.getElementById(imgId);
+        if (img) {
+            img.style.display = 'block';
+        }
+    });
+
+    item.addEventListener('mouseout', function() {
+        const imgId = this.getAttribute('data-image');
+        const img = document.getElementById(imgId);
+        if (img) {
+            img.style.display = 'none';
+        }
+    });
+});
+    </script>
 </body>
 </html>

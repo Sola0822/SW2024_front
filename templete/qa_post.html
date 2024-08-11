@@ -6,19 +6,7 @@
     <title>Q&A 게시글</title>
     <link rel="stylesheet" href="../asset/Main.css">
     <link rel="stylesheet" href="../asset/Communication.css">
-    <style>
-        .post-content {
-            margin: 20px;
-        }
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        .back-button {
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="../asset/qa_post.css">
 </head>
 <body>
     <header>
@@ -33,27 +21,30 @@
                 <a href="Sujung.html" class="tab"><div><span>수정캠퍼스</span></div></a>
                 <a href="Unjung.html" class="tab"><div><span>운정캠퍼스</span></div></a>
                 <a href="Bus.html" class="tab"><div><span>셔틀버스</span></div></a>
-                <a href="Communication.html" class="tab"><div><span>수정이 공간</span></div></a>
+                <a href="view.html" class="tab"><div><span>수정이 공간</span></div></a>
             </div>
         </nav>
     </header>
 
-<div class="content__inner"> <!--수정이 공간-->
-    <div class="page">
-        <div class="post-content">
-            <h3 id="postTitle"></h3>
-            <p id="postAuthor"></p>
-            <p id="postContent"></p>
-        </div>
-        <div class="navigation">
-            <a id="prevPostLink" href="#"></a>
-            <a id="nextPostLink" href="#"></a>
-        </div>
-        <div class="back-button">
-            <button onclick="goBack()">뒤로가기</button>
+<main>
+    <div class="content__inner"> <!--수정이 공간-->
+        <div class="page">
+            <div class="post-content">
+                <h3 id="postTitle"></h3>
+                <p id="postAuthor"></p>
+                <p id="postContent"></p>
+            </div>
+            <div class="navigation">
+                <a id="prevPostLink" href="#"></a>
+                <a id="nextPostLink" href="#"></a>
+            </div>
+            <div class="back-button">
+                <button onclick="goBack()">뒤로가기</button>
+            </div>
         </div>
     </div>
-</div>
+</main>
+
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const postId = urlParams.get('id');
