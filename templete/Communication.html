@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../asset/main.css">
     <link rel="stylesheet" href="../asset/Communication.css">
     <link rel="stylesheet" href="../asset/list.css">
-    <script  src="../asset/tab.js"></script> <!--자바스크립트 적용-->
+    <script src="../asset/tab.js"></script> <!-- 자바스크립트 적용 -->
 </head>
 <body>
     <header>
@@ -28,16 +28,13 @@
     </header>
 
     <main>
-        <div class="content__inner"> <!--수정이 공간-->
+        <div class="content__inner"> <!-- 수정이 공간 -->
             <div class="page">
-  
-                <div class="tab_content"> <!--수정이 공간 tab-->
-                    <input class="communication-tab" type="radio" name="tabmenu" id="FAQ" onclick="showTab('faq')" checked>
-                    <label for="FAQ">FAQ</label>
-                    <input class="communication-tab" type="radio" name="tabmenu" id="Q&A" onclick="showTab('qa')">
-                    <label for="Q&A">Q&A</label>
 
-                    <div class="conbox con1"> <!--FAQ 게시판-->
+                <div class="tab_content"> <!-- 수정이 공간 tab -->
+                    <div class="communication-tab" onclick="showTab('faq', this)">FAQ</div>
+                    <div class="communication-tab" onclick="showTab('qa', this)">Q&A</div>
+                    <div id="faq" class="conbox con1 tab-content"> <!-- FAQ 게시판 -->
                         <div class="accordion">
                             <div id="faqPosts"></div>
                             <div class="write-button" id="faqWriteButton" style="display: none;">
@@ -65,11 +62,10 @@
                                     2. 셀프 카페테리아를 지나 난향관 이동 <br>
                                     3. 난향관 1층에서 엘리베이터 이용(4층)
                                 </p>
-                                <p class="subhead"> - 3단 언덕 피해가기 성공! - </p>
-                               
+                                <p class="subhead">- 3단 언덕 피해가기 성공! -</p>
                             </div>
                             <input type="radio" name="accordion" id="answer03">
-                            <label for="answer03" class="FAQ_title"> 학교 속 숨겨진 구름다리?<em></em></label>
+                            <label for="answer03" class="FAQ_title">학교 속 숨겨진 구름다리?<em></em></label>
                             <div>
                                 <p>
                                     - 학생회관(4층) ~ 난향관(1층) <br>
@@ -84,62 +80,30 @@
                         </div>
                     </div>
 
-                    <div class="conbox con2"> <!--Q&A 게시판-->
-                        <div class="search-box">
-                            <input type="text" class="search-txt" id="searchInput" placeholder="검색어를 입력하세요.">
-                            <button class="search-btn" onclick="searchPosts(1)">
-                                <img src="../asset/이미지/검색.png" alt="검색 버튼" width="30px">
-                            </button>
-                            <p id="error" class="error">검색어를 두 글자 이상 입력하세요.</p>
-                        </div>
+                    <div id="qa" class="conbox con2 tab-content"> <!-- Q&A 게시판 -->
 
-                            <div class="idx_board">
-                                <div class="title">
-                                        <h2 class="name">Q&A 게시판</h2>
-                                        <p>학교 생활하면서 궁금한 사항들을 묻고 답하는 게시판입니다.</p>
-                                    </div>
+                        <div class="idx_board">
+                            <div class="title">
+                                <h2 class="name">Q&A 게시판</h2>
+                                <p>학교 생활하면서 궁금한 사항들을 묻고 답하는 게시판입니다.</p>
 
-                                        
-                                        
-                                    </div>
-
-                                    <div class="list">
-                                        <div class="top">
-                                            <div class="num">번호</div>
-                                            <div class="title">제목</div>
-                                            <div class="writer">글쓴이</div>
-                                            <div class="date">작성일</div>
-                                        </div>
-                                        <div>
-                                            <div class="num">1</div>
-                                            <div class="title"><a href="view.html">글 제목이 들어갑니다.</a></div>
-                                            <div class="writer">김이름</div>
-                                            <div class="date">2021.1.15</div>
-                                        </div>
-                                    </div>
-                                    <div class="board_page">
-                                        <a href="#" class="bt first"><<</a>
-                                        <a href="#" class="bt prev"><</a>
-                                        <a href="#" class="num on">1</a>
-                                        <a href="#" class="num">2</a>
-                                        <a href="#" class="num">3</a>
-                                        <a href="#" class="num">4</a>
-                                        <a href="#" class="num">5</a>
-                                        <a href="#" class="bt next">></a>
-                                        <a href="#" class="bt last">>></a>
-
-                                        <div id="qaPosts"></div>
-                                        <div class="pagination" id="qaPagination"></div>
-                                    </div>
-                                    <div class="bt_wrap">
-                                        <div class="write-button">
-                                            <button onclick="location.href='write.html'" class="on">등록</button>
-                                        </div>
-                                        
+                                <div class="search-box">
+                                    <input type="text" class="search-txt" id="searchInput" placeholder="검색어를 입력하세요.">
+                                    <button class="search-btn" onclick="searchPosts(1)">
+                                        <img src="../asset/이미지/검색.png" alt="검색 버튼" width="30px">
+                                    </button>
+                                    <p id="error" class="error">*두 글자 이상 입력하세요.</p>
                                 </div>
-                            </div>
+                            </div>     
+                        </div>
+                        <div id="qaPosts"></div>
+                        <div class="pagination" id="qaPagination"></div>
                     </div>
-
+                    <div class="bt_wrap">
+                        <div class="write-button">
+                            <button onclick="location.href='write.html'" class="on">등록</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,13 +114,24 @@
 
     <script>
         let deletePostId = null;
+        let currentUser = null;
         const authToken = sessionStorage.getItem('authToken');
 
-        function showTab(tabId) {
+        function showTab(tabId, clickedTab) {
+            // 모든 탭과 탭 콘텐츠에서 active 클래스 제거
+            const tabs = document.querySelectorAll('.communication-tab');
             const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
             contents.forEach(content => content.classList.remove('active'));
+            
+            // 클릭한 탭에 active 클래스 추가
+            clickedTab.classList.add('active');
+            
+            // 선택된 콘텐츠에 active 클래스 추가
             document.getElementById(tabId).classList.add('active');
-
+            
+            // Load posts if necessary
             if (tabId === 'faq') {
                 fetchFaqPosts();
             } else if (tabId === 'qa') {
@@ -170,6 +145,7 @@
         }
 
         function fetchFaqPosts(page = 1) {
+            const token = sessionStorage.getItem('authToken');
             fetch(`/faq_posts?page=${page}`)
                 .then(response => response.json())
                 .then(data => {
@@ -179,7 +155,6 @@
                         <div>
                             <label for="${post._id}" class="FAQ_title" onclick="toggleContent(this)">${post.title}<em></em></label>
                             <div id="faqContent-${post._id}" style="display:none;">
-                                <p class="subhead">${post.subhead}</p>
                                 <p>${post.content}</p>
                             </div>
                         </div>
@@ -187,7 +162,6 @@
                     setupFaqPagination(totalPages, page);
 
                     // Check if user is JBJD
-                    const token = sessionStorage.getItem('authToken');
                     if (token) {
                         fetch('/users/me', {
                             headers: {
@@ -196,6 +170,7 @@
                         })
                         .then(response => response.json())
                         .then(user => {
+                            currentUser = user;
                             if (user.userID === 'JBJD') {
                                 document.getElementById('faqWriteButton').style.display = 'flex';
                             } else {
@@ -209,91 +184,32 @@
         }
 
         function fetchQaPosts(page = 1) {
-            const query = document.getElementById('searchInput').value.trim();
-            if (query.length > 0 && query.length < 2) {
-                document.getElementById('error').style.display = 'block';
-                return;
-            }
-            document.getElementById('error').style.display = 'none';
-            fetch(`/posts/qa?page=${page}&query=${query}`)
+            const searchQuery = document.getElementById('searchInput').value;
+            fetch(`/qa_posts?page=${page}&search=${encodeURIComponent(searchQuery)}`)
                 .then(response => response.json())
                 .then(data => {
                     const { posts, totalPages } = data;
                     const qaPostsDiv = document.getElementById('qaPosts');
-                    qaPostsDiv.innerHTML = `
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>제목</th>
-                                    <th>글쓴이</th>
-                                    <th>작성일</th>
-                                    <th>삭제</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${posts.map((post, index) => `
-                                    <tr>
-                                        <td>${(page - 1) * 5 + index + 1}</td>
-                                        <td><a href="/qa_post.html?id=${post._id}">${post.title}</a></td>
-                                        <td>${post.author.username}</td>
-                                        <td>${new Date(post.date).toLocaleString()}</td>
-                                        <td><button onclick="showDeleteModal('${post._id}')">삭제</button></td>
-                                    </tr>
-                                `).join('')}
-                            </tbody>
-                        </table>
-                    `;
+                    qaPostsDiv.innerHTML = posts.map(post => `
+                        <div>
+                            <h3>${post.title}</h3>
+                            <p>${post.content}</p>
+                        </div>
+                    `).join('');
                     setupQaPagination(totalPages, page);
-                });
-        }
-
-        function showDeleteModal(postId) {
-            deletePostId = postId;
-            document.getElementById('deleteModal').style.display = 'block';
-        }
-
-        function closeDeleteModal() {
-            deletePostId = null;
-            document.getElementById('deleteModal').style.display = 'none';
-        }
-
-        function confirmDelete() {
-            const password = document.getElementById('deletePassword').value;
-            const token = sessionStorage.getItem('authToken');
-            fetch(`/posts/${deletePostId}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'x-auth-token': token
-                },
-                body: JSON.stringify({ password })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.msg);
-                if (data.success) {
-                    fetchQaPosts();
-                }
-                closeDeleteModal();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+                })
+                .catch(error => console.error('Error:', error));
         }
 
         function setupFaqPagination(totalPages, currentPage) {
             const paginationDiv = document.getElementById('faqPagination');
             paginationDiv.innerHTML = '';
             for (let i = 1; i <= totalPages; i++) {
-                const pageItem = document.createElement('span');
-                pageItem.innerHTML = i;
-                pageItem.classList.add('page-item');
-                if (i === currentPage) {
-                    pageItem.style.fontWeight = 'bold';
-                }
-                pageItem.addEventListener('click', () => fetchFaqPosts(i));
-                paginationDiv.appendChild(pageItem);
+                const button = document.createElement('button');
+                button.innerText = i;
+                button.className = i === currentPage ? 'active' : '';
+                button.onclick = () => fetchFaqPosts(i);
+                paginationDiv.appendChild(button);
             }
         }
 
@@ -301,60 +217,36 @@
             const paginationDiv = document.getElementById('qaPagination');
             paginationDiv.innerHTML = '';
             for (let i = 1; i <= totalPages; i++) {
-                const pageItem = document.createElement('span');
-                pageItem.innerHTML = i;
-                pageItem.classList.add('page-item');
-                if (i === currentPage) {
-                    pageItem.style.fontWeight = 'bold';
-                }
-                pageItem.addEventListener('click', () => fetchQaPosts(i));
-                paginationDiv.appendChild(pageItem);
+                const button = document.createElement('button');
+                button.innerText = i;
+                button.className = i === currentPage ? 'active' : '';
+                button.onclick = () => fetchQaPosts(i);
+                paginationDiv.appendChild(button);
             }
         }
 
         function searchPosts(page = 1) {
-            fetchQaPosts(page);
-        }
-
-        function toggleContent(element) {
-            var content = element.nextElementSibling;
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
+            const searchQuery = document.getElementById('searchInput').value.trim();
+            if (searchQuery.length >= 2) {
+                document.getElementById('error').style.display = 'none';
+                fetchQaPosts(page);
             } else {
-                content.style.display = "none";
+                document.getElementById('error').style.display = 'block';
             }
         }
 
-        // 로그인 상태 확인
-        document.addEventListener('DOMContentLoaded', () => {
-            const token = sessionStorage.getItem('authToken');
-            if (token) {
-                fetch('/users/me', {
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
-                })
-                .then(response => response.json())
-                .then(user => {
-                    if (user.username) {
-                        document.getElementById('signin').innerHTML = `
-                            ${user.username}님, 반갑습니다! 
-                            <button id="logoutButton">로그아웃</button>
-                        `;
-                        document.getElementById('logoutButton').addEventListener('click', () => {
-                            sessionStorage.removeItem('authToken');
-                            window.location.href = '/index.html';
-                        });
-                    }
-                })
-                .catch(error => console.error('Error:', error));
+        function toggleContent(label) {
+            const content = label.nextElementSibling;
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
             }
-        });
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
-            showTab('faq');
+            showTab('faq', document.querySelector('.communication-tab')); // 기본적으로 FAQ 탭 표시
         });
     </script>
 </body>
-
 </html>
